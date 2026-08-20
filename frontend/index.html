@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IntelliAudit | Enterprise Risk & Fraud Detection</title>
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--ink:#172033;--muted:#6b7280;--line:#e5eaf2;--blue:#2563eb;--nav:#0b1220;--green:#16a34a;--amber:#d97706;--red:#dc2626}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+button,input{font:inherit}.app{min-height:100vh;display:flex}.side{position:fixed;left:0;top:0;bottom:0;width:245px;background:var(--nav);color:#dbe5f3;padding:20px 14px;z-index:5}.brand{display:flex;gap:11px;align-items:center;padding:7px 10px 25px}.logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#2563eb,#06b6d4);display:grid;place-items:center;color:#fff;font-weight:900}.brand b{display:block;color:white;font-size:18px}.brand small{color:#8fa1bb}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;color:#aebbd0;text-align:left;padding:11px 12px;border-radius:10px;cursor:pointer}.nav button:hover,.nav button.active{background:#17243a;color:#fff}.main{margin-left:245px;flex:1}.top{height:70px;background:white;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 28px;position:sticky;top:0;z-index:4}.top h2{margin:0;font-size:20px}.online{font-size:13px;color:#475569}.online i{display:inline-block;width:9px;height:9px;background:var(--green);border-radius:50%;margin-right:7px}.wrap{padding:28px;max-width:1450px;margin:auto}.page{display:none}.page.active{display:block}.hero{background:linear-gradient(135deg,#0e1b30,#1c4175);color:#fff;border-radius:18px;padding:32px;margin-bottom:22px}.hero h1{margin:0 0 10px;font-size:31px}.hero p{max-width:760px;color:#cbd8e8;line-height:1.6}.btn{border:0;border-radius:9px;padding:11px 16px;font-weight:700;cursor:pointer}.primary{background:var(--blue);color:#fff}.light{background:#fff;color:#17345e}.outline{background:#fff;border:1px solid var(--line);color:var(--ink)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:20px}.stat,.card,.feature{background:#fff;border:1px solid var(--line);border-radius:15px;box-shadow:0 10px 28px #0f172a0b}.stat{padding:19px}.stat small{color:var(--muted)}.stat strong{display:block;font-size:28px;margin-top:5px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{padding:22px}.card h3{margin:0 0 14px}.muted{color:var(--muted)}.form{display:grid;grid-template-columns:1fr 1fr;gap:15px}.form label{font-size:13px;font-weight:700;display:block;margin-bottom:6px}.form input{width:100%;padding:11px;border:1px solid #d8deea;border-radius:9px}.full{grid-column:1/-1}.result{text-align:center;min-height:320px;display:flex;flex-direction:column;justify-content:center;align-items:center}.score{font-size:66px;font-weight:900}.badge,.pill{display:inline-block;border-radius:999px;font-weight:800;padding:6px 11px;font-size:12px}.low{background:#dcfce7;color:#166534}.medium{background:#fef3c7;color:#92400e}.high{background:#fee2e2;color:#991b1b}.reasons{text-align:left;max-width:420px;line-height:1.8}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{padding:21px}.feature h3{margin:9px 0 6px}.table{overflow:auto}.table table{width:100%;border-collapse:collapse}.table th,.table td{padding:11px;border-bottom:1px solid var(--line);font-size:13px;text-align:left}.chart{height:190px;display:flex;align-items:end;gap:14px;padding:10px 10px 28px}.bar{flex:1;background:linear-gradient(#60a5fa,#2563eb);border-radius:7px 7px 2px 2px;position:relative;min-height:8px}.bar span{position:absolute;bottom:-24px;left:50%;transform:translateX(-50%);font-size:11px;color:var(--muted)}.check{display:flex;gap:10px;padding:13px 0;border-bottom:1px solid var(--line)}.check i{width:10px;height:10px;border-radius:50%;background:var(--green);margin-top:5px}.code{background:#0b1220;color:#dbeafe;border-radius:10px;padding:15px;font-family:Consolas,monospace;white-space:pre-wrap}.toast{position:fixed;right:22px;bottom:22px;background:#111827;color:white;padding:12px 15px;border-radius:9px;display:none;z-index:10}
+@media(max-width:900px){.stats{grid-template-columns:1fr 1fr}.features{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}}@media(max-width:650px){.side{width:70px}.brand div:not(.logo),.nav button span{display:none}.main{margin-left:70px}.wrap{padding:16px}.stats,.features,.form{grid-template-columns:1fr}.top{padding:0 15px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side">
+<div class="brand"><div class="logo">IA</div><div><b>IntelliAudit</b><small>Risk & Fraud Platform</small></div></div>
+<div class="nav">
+<button class="active" data-page="home">⌂ <span>Home</span></button>
+<button data-page="dashboard">▦ <span>Dashboard</span></button>
+<button data-page="audit">✓ <span>Transaction Audit</span></button>
+<button data-page="reports">▤ <span>Audit Reports</span></button>
+<button data-page="analytics">▥ <span>Risk Analytics</span></button>
+<button data-page="fraud">⚠ <span>Fraud Detection</span></button>
+<button data-page="system">● <span>System Status</span></button>
+<button data-page="health">💚 <span>Health</span></button>
+<button data-page="docs">? <span>Documentation</span></button>
+</div>
+</aside>
+<main class="main">
+<header class="top"><div><h2 id="title">Home</h2><small class="muted" id="sub">Intelligent transaction risk management</small></div><div class="online"><i></i><span id="api">API Online</span></div></header>
+<div class="wrap">
+
+<section id="home" class="page active">
+<div class="hero"><h1>Intelligent Audit. Smarter Risk Decisions.</h1><p>IntelliAudit is an AI-powered enterprise audit, risk and fraud detection platform for evaluating transactions, explaining risk indicators and monitoring audit activity.</p><button class="btn light" onclick="go('audit')">Start Transaction Audit</button></div>
+<div class="features"><div class="feature"><h3>🛡️ Risk Assessment</h3><p class="muted">Evaluate transaction risk using amount, failed attempts, account age and country.</p></div><div class="feature"><h3>🔎 Fraud Detection</h3><p class="muted">Identify suspicious indicators and display clear reasons behind a risk decision.</p></div><div class="feature"><h3>📊 Audit Analytics</h3><p class="muted">Review audit history and understand low, medium and high-risk activity.</p></div></div>
+</section>
+
+<section id="dashboard" class="page">
+<div class="stats"><div class="stat"><small>Total Audits</small><strong id="total">0</strong></div><div class="stat"><small>High Risk</small><strong id="high">0</strong></div><div class="stat"><small>Medium Risk</small><strong id="med">0</strong></div><div class="stat"><small>Low Risk</small><strong id="low">0</strong></div></div>
+<div class="grid"><div class="card"><h3>Risk Distribution</h3><div class="chart" id="chart"></div></div><div class="card"><h3>Latest Audit</h3><div id="latest" class="muted">No transaction analyzed yet.</div></div></div>
+</section>
+
+<section id="audit" class="page"><div class="grid"><div class="card"><h3>Transaction Audit</h3><p class="muted">Enter transaction information and analyze its risk.</p><form id="auditForm" class="form"><div><label>Transaction Amount</label><input id="amount" type="number" min="0" required></div><div><label>Country</label><input id="country" required></div><div><label>Failed Login Attempts</label><input id="failed" type="number" min="0" required></div><div><label>Account Age (Days)</label><input id="age" type="number" min="0" required></div><div class="full"><button class="btn primary" id="auditBtn">Analyze Transaction</button></div></form></div>
+<div class="card result"><h3>Risk Assessment</h3><div class="score" id="score">—</div><div id="level" class="badge" style="display:none"></div><b>Risk Reasons</b><ul class="reasons" id="reasons"><li>Awaiting analysis.</li></ul></div></div></section>
+
+<section id="reports" class="page"><div class="card"><h3>Audit Reports</h3><p class="muted">Recent analyses stored locally for this project demonstration.</p><div class="table"><table><thead><tr><th>Date</th><th>Amount</th><th>Country</th><th>Failed</th><th>Age</th><th>Score</th><th>Risk</th></tr></thead><tbody id="reports"></tbody></table></div><br><button class="btn outline" onclick="clearReports()">Clear Reports</button></div></section>
+
+<section id="analytics" class="page"><div class="stats"><div class="stat"><small>Average Risk Score</small><strong id="avg">0</strong></div><div class="stat"><small>High-Risk Rate</small><strong id="rate">0%</strong></div><div class="stat"><small>Countries Audited</small><strong id="countries">0</strong></div><div class="stat"><small>Total Value</small><strong id="value">₹0</strong></div></div><div class="card"><h3>Risk Analytics</h3><div class="chart" id="chart2"></div></div></section>
+
+<section id="fraud" class="page"><div class="hero"><h1 style="font-size:27px">Fraud Detection Center</h1><p>IntelliAudit highlights common suspicious indicators used by the current audit engine.</p></div><div class="features"><div class="feature"><h3>💰 High Amount</h3><p class="muted">Large transaction values increase the risk score.</p></div><div class="feature"><h3>🔐 Failed Attempts</h3><p class="muted">Repeated failed login attempts indicate suspicious access activity.</p></div><div class="feature"><h3>🆕 New Account</h3><p class="muted">Recently created accounts receive additional risk weighting.</p></div></div></section>
+
+<section id="health" class="page">
+<div class="card">
+<h3>API Health Check</h3>
+<p class="muted">Live status pulled directly from the backend's /health endpoint.</p>
+<div id="healthBox" style="padding:20px;text-align:center;">
+<div id="healthDot" style="width:14px;height:14px;border-radius:50%;background:#d1d5db;margin:0 auto 10px;"></div>
+<div id="healthStatus" style="font-weight:800;font-size:18px;">Checking...</div>
+<div id="healthDetail" class="muted" style="margin-top:8px;"></div>
+</div>
+<button class="btn outline" onclick="checkHealth()">Refresh</button>
+</div>
+</section>
+
+<section id="system" class="page"><div class="grid"><div class="card"><h3>System Health</h3><div class="check"><i></i><div><b>Frontend</b><div class="muted">Loaded successfully</div></div></div><div class="check"><i id="backendDot"></i><div><b>Backend API</b><div class="muted" id="backendText">Checking...</div></div></div><div class="check"><i></i><div><b>Risk Engine</b><div class="muted">Audit endpoint configured</div></div></div></div><div class="card"><h3>API Information</h3><p><b>Audit:</b> POST /audit</p><p><b>Health:</b> GET /health</p><p><b>Dashboard:</b> GET /dashboard</p><p><b>Docs:</b> GET /docs</p></div></div></section>
+
+<section id="docs" class="page"><div class="card"><h3>Documentation</h3><p class="muted">IntelliAudit project and API reference.</p><h4>Audit request</h4><div class="code">POST /audit
+
+{
+  "amount": 100000,
+  "country": "India",
+  "failed_attempts": 8,
+  "account_age_days": 1
+}</div><h4>Project</h4><p>FastAPI provides the backend API while this frontend provides the dashboard, audit workflow, reports and analytics interface.</p></div></section>
+
+</div></main></div><div class="toast" id="toast"></div>
+<script>
+const meta={home:["Home","Intelligent transaction risk management"],dashboard:["Dashboard","Risk overview and audit activity"],audit:["Transaction Audit","Analyze a transaction in real time"],reports:["Audit Reports","Review analyzed transactions"],analytics:["Risk Analytics","Understand your audit activity"],fraud:["Fraud Detection","Suspicious activity indicators"],system:["System Status","Backend and application health"],health:["Health","Live API health check"],docs:["Documentation","Project and API information"]};
+function go(p){document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));document.getElementById(p).classList.add("active");document.querySelectorAll(".nav button").forEach(x=>x.classList.toggle("active",x.dataset.page===p));title.textContent=meta[p][0];sub.textContent=meta[p][1];history.replaceState(null,"","#"+p);refresh()}
+document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>go(b.dataset.page));
+function get(){try{return JSON.parse(localStorage.getItem("ia_reports")||"[]")}catch{return[]}}
+function save(x){let a=get();a.unshift(x);localStorage.setItem("ia_reports",JSON.stringify(a.slice(0,100)))}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+function money(n){return "₹"+Number(n).toLocaleString("en-IN")}
+function toast(s){let t=document.getElementById("toast");t.textContent=s;t.style.display="block";setTimeout(()=>t.style.display="none",2200)}
+auditForm.onsubmit=async e=>{e.preventDefault();auditBtn.disabled=true;auditBtn.textContent="Analyzing...";let payload={amount:+amount.value,country:country.value.trim(),failed_attempts:+failed.value,account_age_days:+age.value};try{let r=await fetch("/audit",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});if(!r.ok)throw Error(r.status);let d=await r.json();let s=d.risk_score??d.score??0,l=String(d.risk_level??d.level??(s>=70?"HIGH":s>=40?"MEDIUM":"LOW")).toUpperCase(),rs=d.reasons??d.risk_reasons??[];score.textContent=s;level.style.display="inline-block";level.textContent=l;level.className="badge "+l.toLowerCase();reasons.innerHTML=(rs.length?rs:["No significant risk indicators detected."]).map(x=>"<li>"+esc(x)+"</li>").join("");save({time:new Date().toLocaleString(),...payload,score:s,level:l,reasons:rs});refresh();toast("Transaction analyzed successfully")}catch(err){console.error(err);toast("Could not connect to /audit")}finally{auditBtn.disabled=false;auditBtn.textContent="Analyze Transaction"}};
+function bars(id,vals,labels){let m=Math.max(...vals,1);document.getElementById(id).innerHTML=vals.map((v,i)=>`<div class="bar" style="height:${Math.max(8,v/m*160)}px"><span>${labels[i]} (${v})</span></div>`).join("")}
+function refresh(){let a=get(),h=a.filter(x=>x.level==="HIGH").length,m=a.filter(x=>x.level==="MEDIUM").length,l=a.filter(x=>x.level==="LOW").length;total.textContent=a.length;high.textContent=h;med.textContent=m;low.textContent=l;bars("chart",[h,m,l],["High","Medium","Low"]);bars("chart2",[h,m,l],["High","Medium","Low"]);latest.innerHTML=a[0]?`<p><b>${a[0].time}</b></p><p>Amount: <b>${money(a[0].amount)}</b></p><p>Country: <b>${esc(a[0].country)}</b></p><p>Risk: <span class="pill ${a[0].level.toLowerCase()}">${a[0].level}</span> &nbsp; Score: <b>${a[0].score}</b></p>`:"No transaction analyzed yet.";reports.innerHTML=a.length?a.map(x=>`<tr><td>${esc(x.time)}</td><td>${money(x.amount)}</td><td>${esc(x.country)}</td><td>${x.failed_attempts}</td><td>${x.account_age_days}</td><td><b>${x.score}</b></td><td><span class="pill ${x.level.toLowerCase()}">${x.level}</span></td></tr>`).join(""):`<tr><td colspan="7">No reports yet.</td></tr>`;avg.textContent=a.length?Math.round(a.reduce((s,x)=>s+x.score,0)/a.length):0;rate.textContent=(a.length?Math.round(h/a.length*100):0)+"%";countries.textContent=new Set(a.map(x=>String(x.country).toLowerCase())).size;value.textContent=money(a.reduce((s,x)=>s+x.amount,0))}
+function clearReports(){localStorage.removeItem("ia_reports");refresh();toast("Reports cleared")}
+async function health(){try{let r=await fetch("/health");if(!r.ok)throw 0;api.textContent="API Online";backendText.textContent="Healthy and responding"}catch{api.textContent="API Offline";backendText.textContent="Unable to reach /health";document.querySelector(".online i").style.background="var(--red)";backendDot.style.background="var(--red)"}}
+async function checkHealth(){const dot=document.getElementById("healthDot"),status=document.getElementById("healthStatus"),detail=document.getElementById("healthDetail");status.textContent="Checking...";dot.style.background="#d1d5db";try{let r=await fetch("/health");let d=await r.json();if(r.ok){dot.style.background="var(--green)";status.textContent="Healthy";detail.textContent="Service: "+(d.service||"IntelliAudit")+" — Status: "+(d.status||"healthy")}else throw Error()}catch{dot.style.background="var(--red)";status.textContent="Unreachable";detail.textContent="Could not connect to /health"}}
+refresh();health();checkHealth();go(location.hash.slice(1)||"home");
+</script>
+</body>
+</html>
