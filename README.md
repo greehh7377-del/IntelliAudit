@@ -29,6 +29,11 @@ IntelliAudit is a full-stack web application that analyzes financial transaction
 3. A risk score and risk level (Low/Medium/High) are returned instantly
 4. Results are displayed and stored in the Audit Reports history
 
+## Screenshots
+
+![Dashboard](Dashboard.png)
+![Transaction Audit](TransactionAudit.png)
+
 ## Running Locally
 
 **Requirements:** Python 3.10+
