@@ -31,8 +31,8 @@ IntelliAudit is a full-stack web application that analyzes financial transaction
 
 ## Screenshots
 
-![Dashboard](Dashboard.png)
-![Transaction Audit](Transaction Audit.png)
+![Dashboard](Da
+![Transaction Audit](Transa
 
 ## Running Locally
 
